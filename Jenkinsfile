@@ -24,7 +24,7 @@ pipeline {
 
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/forged-by-grace/${APP_NAME}.git'
+                git branch: 'main', url: 'https://github.com/forged-by-grace/detect-reused-refresh-token-handler.git'
             }
         }
 

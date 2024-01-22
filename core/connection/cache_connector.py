@@ -1,4 +1,3 @@
-# from aredis_om import get_redis_connection
 from core.utils.settings import settings
 from  redis import asyncio as aioredis
 

@@ -18,7 +18,7 @@ async def set_last_committed_offsets(redis, consumer_group, topic, committed_off
     key = f"{consumer_group}_{topic}_last_committed_offsets"
     await redis.set(key, json.dumps(committed_offsets))
 
-async def kafka_consumer_liveness_probe(bootstrap_servers, group_id, topic, redis_host, redis_port):
+async def kafka_consumer_liveness_probe(bootstrap_servers, group_id, topic):
     consumer_conf = {
         'bootstrap_servers': bootstrap_servers,
         'group_id': group_id,
